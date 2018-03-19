@@ -1,0 +1,26 @@
+version: "2"
+services:
+  ged-intranet-node:
+    image: node:8
+    container_name: ged-intranet
+    restart: always
+    network_mode: minha-rede
+    working_dir: /var/www/gedintranet
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - /dados/ged-intranet-docker/gedintranet:/var/www/gedintranet
+    ports:
+      - "3201:3000"
+    command: "node index.js"
+    links:
+      - mongo
+  mongo:
+    container_name: ged-intranet-mongo
+    network_mode: minha-rede
+    image: mongo
+    volumes:
+      - /dados/ged-intranet-mongo/data:/data/db
+    ports:
+      - "27018:27017"

@@ -1,0 +1,27 @@
+{
+  "name": "gedintranet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=3005 node app.js",
+    "dev": "PORT=3005 nodemon app.js"
+  },
+  "author": "f1522457",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "express-validator": "^5.0.3",
+    "gridfs-stream": "^1.1.1",
+    "materialize": "^1.0.0",
+    "materialize-css": "^0.100.2",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.11",
+    "multer": "^1.3.0",
+    "nodemon": "^1.17.2"
+  }
+}

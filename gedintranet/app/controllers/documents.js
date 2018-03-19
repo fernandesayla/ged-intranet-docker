@@ -5,8 +5,8 @@ Recebe o BBSSOToken e verifica se tem algum registro no redis (verifica se a con
 
 */
 
-  app.get('/', (req, res, next) => {
-      res.render('index')
-  //  res.status(201).json({success: false, msg: 'Usuario não encontrado'});
-  })
+  // app.get('/', (req, res, next) => {
+  //     res.render('index')
+  // //  res.status(201).json({success: false, msg: 'Usuario não encontrado'});
+  // })
 }

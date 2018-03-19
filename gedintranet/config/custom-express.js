@@ -1,4 +1,5 @@
 var express = require('express');
+var home = require('../app/routes/home');
 var consign = require('consign');
 var bodyParser = require('body-parser');
 
@@ -12,12 +13,14 @@ module.exports = function() {
   app.use(express.static('./public'))
   app.set('view engine', 'ejs');
   app.set('views','./app/views');
- 
 
-  consign()
-  .include('controllers')
-  .then('persistencia')
+  //
+  // consign()
+  // .include('controllers')
+  // .then('persistencia')
 
-  .into(app);
+  // .into(app);
+
+  home(app);
   return app;
 }
